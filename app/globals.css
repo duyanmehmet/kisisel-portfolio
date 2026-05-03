@@ -5,8 +5,8 @@
   --bg-card: #111111;
   --bg-card-hover: #161616;
   --border: #2A2A2A;
-  --text-primary: #F5F5F5;
-  --text-secondary: #888888;
+  --text-primary: #FFFFFF;
+  --text-secondary: #AAAAAA;
   --accent: #6C63FF;
 }
 
@@ -24,6 +24,8 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
+  font-size: 17px;
+  line-height: 1.7;
 }
 
 ::selection {

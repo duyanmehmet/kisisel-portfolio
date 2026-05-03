@@ -1,72 +1,77 @@
+"use client";
+
 import { Download, MapPin, Briefcase, Languages } from "lucide-react";
 
 export default function About() {
+  const handleCV = (e: React.MouseEvent) => {
+    e.preventDefault();
+    alert("CV dosyası yakında eklenecek.");
+  };
+
   return (
-    <section className="min-h-[calc(100vh-4rem)] flex items-center px-6 py-16">
+    <section className="min-h-[calc(100vh-5rem)] flex items-center px-6 py-20">
       <div className="max-w-[900px] mx-auto w-full">
 
-        <div className="mb-10">
-          <p className="text-[#6C63FF] text-sm font-mono uppercase tracking-widest mb-2">Hakkımda</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#F5F5F5]">Ben Kimim?</h2>
-        </div>
+        <p className="text-[#6C63FF] text-base font-mono uppercase tracking-widest mb-3">Hakkımda</p>
+        <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-12">Ben Kimim?</h2>
 
-        <div className="grid md:grid-cols-[200px_1fr] gap-12 items-start">
+        <div className="grid md:grid-cols-[220px_1fr] gap-14 items-start">
 
-          <div className="flex flex-col items-center md:items-start gap-6">
-            <div className="w-36 h-36 rounded-2xl bg-[#111111] border border-[#2A2A2A] flex items-center justify-center shrink-0">
-              <span className="text-5xl font-bold text-[#6C63FF] select-none">MD</span>
+          {/* Sol: Avatar + bilgiler */}
+          <div className="flex flex-col items-center md:items-start gap-8">
+            <div className="w-40 h-40 rounded-3xl bg-[#141414] border-2 border-[#2A2A2A] flex items-center justify-center">
+              <span className="text-6xl font-extrabold text-[#6C63FF]">MD</span>
             </div>
 
-            <div className="space-y-3 w-full">
-              <div className="flex items-center gap-2 text-sm">
-                <MapPin size={14} className="text-[#6C63FF] shrink-0" />
-                <span className="text-[#888888]">Türkiye</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Briefcase size={14} className="text-[#6C63FF] shrink-0" />
-                <span className="text-[#888888]">Freelance & açık</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Languages size={14} className="text-[#6C63FF] shrink-0" />
-                <span className="text-[#888888]">TR / EN</span>
-              </div>
+            <div className="space-y-4 w-full">
+              {[
+                { icon: MapPin,    text: "Türkiye" },
+                { icon: Briefcase, text: "Freelance & açık" },
+                { icon: Languages, text: "Türkçe / İngilizce" },
+              ].map(({ icon: Icon, text }) => (
+                <div key={text} className="flex items-center gap-3">
+                  <Icon size={16} className="text-[#6C63FF] shrink-0" />
+                  <span className="text-[#D0D0D0] text-base">{text}</span>
+                </div>
+              ))}
             </div>
 
-            <a
-              href="/cv-mehmet-duyan.pdf"
-              download
-              className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-[#2A2A2A] text-[#F5F5F5] text-sm font-medium hover:border-[#6C63FF] hover:text-[#6C63FF] transition-all w-full justify-center md:justify-start"
+            <button
+              onClick={handleCV}
+              className="flex items-center gap-2 px-5 py-3 rounded-xl border-2 border-[#333] text-white text-base font-semibold hover:border-[#6C63FF] hover:text-[#6C63FF] transition-all w-full justify-center md:justify-start"
             >
-              <Download size={14} />
+              <Download size={16} />
               CV İndir
-            </a>
+            </button>
           </div>
 
-          <div className="space-y-5 text-[#888888] text-base leading-relaxed">
+          {/* Sağ: Metin */}
+          <div className="space-y-6 text-[#C8C8C8] text-lg leading-relaxed">
             <p>
-              Merhaba, ben <span className="text-[#F5F5F5] font-semibold">Mehmet Duyan</span> — backend geliştirme ve web uygulama mimarisinde uzmanlaşmış bir yazılım geliştiricisiyim.
+              Merhaba, ben <span className="text-white font-bold">Mehmet Duyan</span>. Backend geliştirme ve web uygulama mimarisi alanında uzmanlaşmış bir yazılım geliştiricisiyim.
             </p>
             <p>
-              <span className="text-[#F5F5F5] font-medium">FastAPI, Node.js ve PostgreSQL</span> ile kurumsal düzeyde backend sistemler geliştiriyor; JWT kimlik doğrulama, middleware mimarisi ve veritabanı optimizasyonu konularında çözümler üretiyorum.
+              <span className="text-white font-semibold">FastAPI, Node.js ve PostgreSQL</span> ile kurumsal düzeyde backend sistemler geliştiriyorum. JWT kimlik doğrulama, middleware mimarisi ve veritabanı optimizasyonu konularında somut çözümler üretiyorum.
             </p>
             <p>
-              Temiz kod ve güvenilir API tasarımı önceliğim. Freelance projelere ve tam zamanlı tekliflere açığım.
+              Temiz kod ve güvenilir API tasarımı benim önceliğim. Freelance projelere ve tam zamanlı iş tekliflerine açığım.
             </p>
 
-            <div className="pt-4 grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 pt-2">
               {[
-                { label: "Backend", value: "2+ yıl" },
-                { label: "Proje", value: "10+" },
-                { label: "API", value: "REST / JWT" },
-                { label: "Stack", value: "Python · Node.js" },
-              ].map((item) => (
-                <div key={item.label} className="rounded-xl border border-[#2A2A2A] bg-[#111111] p-4">
-                  <p className="text-xs text-[#555] mb-1">{item.label}</p>
-                  <p className="text-[#F5F5F5] font-semibold">{item.value}</p>
+                { label: "Deneyim",  value: "2+ yıl" },
+                { label: "Proje",    value: "10+"    },
+                { label: "Uzmanlık", value: "REST / JWT" },
+                { label: "Stack",    value: "Python · Node.js" },
+              ].map(item => (
+                <div key={item.label} className="rounded-2xl border border-[#222] bg-[#111] p-5">
+                  <p className="text-[#888] text-sm mb-1">{item.label}</p>
+                  <p className="text-white font-bold text-lg">{item.value}</p>
                 </div>
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>

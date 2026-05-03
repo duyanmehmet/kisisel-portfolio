@@ -35,26 +35,26 @@ export default function Footer({ onNav }: Props) {
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
         <button
           onClick={() => onNav("hero")}
-          className="text-[#555] text-sm hover:text-[#888888] transition-colors"
+          className="text-[#AAAAAA] text-sm hover:text-[#D4D4D4] transition-colors"
         >
           © 2025 Mehmet Duyan
         </button>
 
         <div className="flex items-center gap-4">
           <a href="https://github.com/duyanmehmet" target="_blank" rel="noopener noreferrer"
-            aria-label="GitHub" className="text-[#555] hover:text-[#F5F5F5] transition-colors">
+            aria-label="GitHub" className="text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors">
             <GithubIcon />
           </a>
           <a href="https://www.linkedin.com/in/mehmet-duyan-746192336/" target="_blank" rel="noopener noreferrer"
-            aria-label="LinkedIn" className="text-[#555] hover:text-[#F5F5F5] transition-colors">
+            aria-label="LinkedIn" className="text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors">
             <LinkedinIcon />
           </a>
           <a href="https://www.instagram.com/mehmet__duyan/" target="_blank" rel="noopener noreferrer"
-            aria-label="Instagram" className="text-[#555] hover:text-[#F5F5F5] transition-colors">
+            aria-label="Instagram" className="text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors">
             <InstagramIcon />
           </a>
           <a href="mailto:duyanmehmet183@gmail.com"
-            aria-label="E-posta" className="text-[#555] hover:text-[#F5F5F5] transition-colors">
+            aria-label="E-posta" className="text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors">
             <Mail size={16} />
           </a>
         </div>
