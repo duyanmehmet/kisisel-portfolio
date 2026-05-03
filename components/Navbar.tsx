@@ -22,21 +22,22 @@ export default function Navbar({ active, onNav }: Props) {
   return (
     <>
       <header className="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-md border-b border-[#222]">
-        <div className="max-w-[1100px] mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="w-full px-6 h-20 flex items-center justify-between">
 
           <button onClick={() => go("hero")}
+            style={{ marginLeft: "80px" }}
             className="text-white font-extrabold text-2xl tracking-tight hover:text-[#6C63FF] transition-colors">
             MD
           </button>
 
           {/* Desktop */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-8" style={{ marginRight: "80px" }}>
             {links.map(l => (
               <button key={l.id} onClick={() => go(l.id)}
-                className={`px-5 py-2.5 rounded-xl text-lg font-semibold transition-all ${
+                className={`text-xl font-bold transition-colors ${
                   active === l.id
-                    ? "text-[#6C63FF] bg-[#6C63FF]/10"
-                    : "text-[#C0C0C0] hover:text-white hover:bg-white/5"
+                    ? "text-[#6C63FF]"
+                    : "text-[#C0C0C0] hover:text-[#6C63FF]"
                 }`}>
                 {l.label}
               </button>

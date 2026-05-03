@@ -18,16 +18,14 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-[#0A0A0A]">
       <Navbar active={active} onNav={setActive} />
-
       <main className="flex-1">
-        {active === "hero" && <Hero onNav={setActive} />}
-        {active === "hakkimda" && <About />}
+        {active === "hero"       && <Hero onNav={setActive} />}
+        {active === "hakkimda"   && <About />}
         {active === "yetenekler" && <Skills />}
-        {active === "projeler" && <Projects />}
-        {active === "blog" && <Blog />}
-        {active === "iletisim" && <Contact />}
+        {active === "projeler"   && <Projects />}
+        {active === "blog"       && <Blog />}
+        {active === "iletisim"   && <Contact />}
       </main>
-
       <Footer onNav={setActive} />
     </div>
   );
