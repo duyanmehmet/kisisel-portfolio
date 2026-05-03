@@ -37,7 +37,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="min-h-[calc(100vh-4.5rem)] px-4 sm:px-8 md:px-16 py-10 w-full">
+    <section className="min-h-[calc(100vh-4.5rem)] px-3 sm:px-8 md:px-16 py-8 w-full overflow-hidden" style={{ maxWidth: "100vw" }}>
 
       <p className="text-[#6C63FF] text-sm sm:text-base font-mono uppercase tracking-widest mb-3">İletişim</p>
       <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-3">Benimle Çalış</h2>
@@ -51,13 +51,13 @@ export default function Contact() {
             <a key={label} href={href}
               target={href.startsWith("mailto") || href.startsWith("tel") ? undefined : "_blank"}
               rel="noopener noreferrer"
-              className="flex items-center gap-5 p-6 rounded-2xl border border-[#222] bg-[#111] hover:border-[#6C63FF]/50 transition-colors group">
+              className="flex items-center gap-3 p-3 sm:p-5 rounded-2xl border border-[#222] bg-[#111] hover:border-[#6C63FF]/50 transition-colors group overflow-hidden">
               <div className="w-12 h-12 rounded-xl bg-[#6C63FF]/10 border border-[#6C63FF]/20 flex items-center justify-center shrink-0">
                 <Icon size={22} className="text-[#6C63FF]" />
               </div>
               <div>
                 <p className="text-[#888] text-sm mb-1">{label}</p>
-                <p className="text-white font-bold text-lg group-hover:text-[#6C63FF] transition-colors">{value}</p>
+                <p className="text-white font-bold text-sm sm:text-base group-hover:text-[#6C63FF] transition-colors break-all">{value}</p>
               </div>
             </a>
           ))}

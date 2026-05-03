@@ -38,7 +38,8 @@ export default function RootLayout({
       className={`${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen font-[var(--font-inter)]" suppressHydrationWarning>
+      <body className="min-h-screen font-[var(--font-inter)]" suppressHydrationWarning
+        style={{ overflowX: "hidden", maxWidth: "100vw" }}>
         {children}
       </body>
     </html>

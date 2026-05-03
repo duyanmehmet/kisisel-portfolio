@@ -4,7 +4,7 @@ import { Download, MapPin, Briefcase, Languages, GraduationCap } from "lucide-re
 
 export default function About() {
   return (
-    <section className="min-h-[calc(100vh-4.5rem)] px-4 sm:px-8 md:px-16 py-10 w-full">
+    <section className="min-h-[calc(100vh-4.5rem)] px-3 sm:px-8 md:px-16 py-8 w-full overflow-hidden" style={{ maxWidth: "100vw" }}>
 
       <p className="text-[#6C63FF] text-sm sm:text-base font-mono uppercase tracking-widest mb-3">Hakkımda</p>
       <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-8">Ben Kimim?</h2>
@@ -33,7 +33,7 @@ export default function About() {
           { icon: Briefcase,     label: "Durum",      value: "Freelance & açık"   },
           { icon: Languages,     label: "Dil",        value: "TR / EN"            },
         ].map(({ icon: Icon, label, value }) => (
-          <div key={label} className="rounded-2xl border border-[#222] bg-[#111] p-5 flex flex-col gap-2">
+          <div key={label} className="rounded-2xl border border-[#222] bg-[#111] p-3 sm:p-5 flex flex-col gap-1.5 overflow-hidden">
             <Icon size={18} className="text-[#6C63FF]" />
             <p className="text-[#888] text-xs">{label}</p>
             <p className="text-white font-bold text-sm leading-tight">{value}</p>
@@ -45,7 +45,7 @@ export default function About() {
           href="/cv"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-2xl border border-[#222] bg-[#111] p-5 flex flex-col gap-2 hover:border-[#6C63FF] transition-colors group"
+          className="rounded-2xl border border-[#222] bg-[#111] p-3 sm:p-5 flex flex-col gap-1.5 hover:border-[#6C63FF] transition-colors group overflow-hidden"
         >
           <Download size={18} className="text-[#6C63FF]" />
           <p className="text-[#888] text-xs">Belge</p>

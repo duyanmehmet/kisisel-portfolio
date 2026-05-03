@@ -30,7 +30,7 @@ const posts = [
 
 export default function Blog() {
   return (
-    <section className="min-h-[calc(100vh-4.5rem)] px-4 sm:px-8 md:px-16 py-10 w-full">
+    <section className="min-h-[calc(100vh-4.5rem)] px-3 sm:px-8 md:px-16 py-8 w-full overflow-hidden" style={{ maxWidth: "100vw" }}>
 
       <p className="text-[#6C63FF] text-sm sm:text-base font-mono uppercase tracking-widest mb-3">Blog</p>
       <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-8">Teknik Yazılar</h2>
