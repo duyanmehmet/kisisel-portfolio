@@ -4,6 +4,9 @@ const posts = [
   { title: "FastAPI ile JWT Kimlik Doğrulama: Baştan Sona", date: "12 Nisan 2025", readTime: "8 dk", summary: "FastAPI projelerinde JWT tabanlı kimlik doğrulama sistemi nasıl kurulur? Access token, refresh token ve korumalı endpoint oluşturma.", tags: ["FastAPI", "JWT", "Python"], slug: "fastapi-jwt-kimlik-dogrulama" },
   { title: "PostgreSQL Performans İpuçları: Index ve Sorgu Optimizasyonu", date: "28 Mart 2025", readTime: "6 dk", summary: "EXPLAIN ANALYZE kullanımı, doğru index seçimi, N+1 sorunu ve connection pooling ile PostgreSQL sorgularını nasıl hızlandırırsınız?", tags: ["PostgreSQL", "Veritabanı"], slug: "postgresql-performans-ipuclari" },
   { title: "İyi Bir REST API Tasarımının 5 Altın Kuralı", date: "10 Mart 2025", readTime: "5 dk", summary: "URL yapısı, doğru HTTP status code kullanımı, versiyonlama, sayfalama ve tutarlı hata yanıtları — iyi API tasarımının temel kuralları.", tags: ["API", "REST"], slug: "rest-api-tasarim-kurallari" },
+  { title: "Docker Nedir? Geliştiriciler için Başlangıç Rehberi", date: "20 Şubat 2025", readTime: "7 dk", summary: "Container nedir, Dockerfile nasıl yazılır, Docker Compose ile çoklu servis nasıl yönetilir? Sıfırdan Docker öğrenme rehberi.", tags: ["Docker", "DevOps"], slug: "docker-baslangic-rehberi" },
+  { title: "Python Asyncio: Asenkron Programlamaya Giriş", date: "5 Şubat 2025", readTime: "6 dk", summary: "async/await sözdizimi, asyncio.gather ile paralel işlemler ve FastAPI ile asenkron endpoint yazmak. Performanslı backend geliştirme.", tags: ["Python", "Asyncio"], slug: "python-asyncio-asenkron-programlama" },
+  { title: "Git Workflow: Profesyonel Ekiplerin Kullandığı Yöntemler", date: "18 Ocak 2025", readTime: "5 dk", summary: "Anlamlı commit mesajları, branch stratejisi, .gitignore kullanımı ve git alias ile iş akışını nasıl hızlandırırsınız?", tags: ["Git", "Workflow"], slug: "git-workflow-en-iyi-pratikler" },
 ];
 
 export default function Blog() {
