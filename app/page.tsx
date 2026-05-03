@@ -16,9 +16,9 @@ export default function Home() {
   const [active, setActive] = useState<Section>("hero");
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0A0A0A]">
+    <div className="min-h-screen flex flex-col bg-[#0A0A0A] overflow-x-hidden">
       <Navbar active={active} onNav={setActive} />
-      <main className="flex-1">
+      <main className="flex-1 w-full overflow-x-hidden">
         {active === "hero"       && <Hero onNav={setActive} />}
         {active === "hakkimda"   && <About />}
         {active === "yetenekler" && <Skills />}
