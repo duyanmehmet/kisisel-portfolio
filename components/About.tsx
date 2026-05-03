@@ -4,54 +4,44 @@ import { Download, MapPin, Briefcase, Languages, GraduationCap } from "lucide-re
 
 export default function About() {
   return (
-    <section className="min-h-[calc(100vh-4.5rem)] px-3 sm:px-8 md:px-16 py-8 w-full overflow-hidden" style={{ maxWidth: "100vw" }}>
+    <section style={{ padding: "24px 16px", width: "100%", boxSizing: "border-box", overflowX: "hidden" }}>
 
-      <p className="text-[#6C63FF] text-sm sm:text-base font-mono uppercase tracking-widest mb-3">Hakkımda</p>
-      <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-8">Ben Kimim?</h2>
+      <p style={{ color: "#6C63FF", fontSize: "11px", fontFamily: "monospace", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "8px" }}>Hakkımda</p>
+      <h2 style={{ color: "white", fontSize: "clamp(1.5rem, 6vw, 3.5rem)", fontWeight: 900, marginBottom: "24px", lineHeight: 1.2 }}>Ben Kimim?</h2>
 
-      {/* Biyografi — tam genişlik */}
-      <div className="space-y-5 text-[#C8C8C8] text-sm sm:text-base md:text-lg leading-[1.8] w-full max-w-full" style={{ marginBottom: "48px" }}>
-        <p>
-          Ben <span className="text-white font-bold">Mehmet Duyan</span>. Hakkari doğumluyum. Küçük yaşlardan itibaren teknolojiye olan ilgimle yazılım dünyasına adım attım. Şu an <span className="text-white font-semibold">Iğdır Üniversitesi Bilgisayar Mühendisliği</span> bölümünde eğitimime devam ediyorum.
+      <div style={{ color: "#C8C8C8", fontSize: "clamp(0.85rem, 3.5vw, 1.05rem)", lineHeight: 1.8, marginBottom: "40px", wordBreak: "break-word", overflowWrap: "break-word" }}>
+        <p style={{ marginBottom: "16px" }}>
+          Ben <strong style={{ color: "white" }}>Mehmet Duyan</strong>. Hakkari doğumluyum. Küçük yaşlardan itibaren teknolojiye olan ilgimle yazılım dünyasına adım attım. Şu an <strong style={{ color: "white" }}>Iğdır Üniversitesi Bilgisayar Mühendisliği</strong> bölümünde eğitimime devam ediyorum.
         </p>
-        <p>
-          Backend geliştirme ve web uygulama mimarisi alanında uzmanlaşıyorum. <span className="text-white font-semibold">Python, FastAPI ve Node.js</span> ile kurumsal düzeyde API sistemleri geliştiriyor; JWT kimlik doğrulama, middleware mimarisi ve veritabanı optimizasyonu konularında somut çözümler üretiyorum.
+        <p style={{ marginBottom: "16px" }}>
+          Backend geliştirme ve web uygulama mimarisi alanında uzmanlaşıyorum. <strong style={{ color: "white" }}>Python, FastAPI ve Node.js</strong> ile kurumsal düzeyde API sistemleri geliştiriyor; JWT kimlik doğrulama, middleware mimarisi ve veritabanı optimizasyonu konularında somut çözümler üretiyorum.
         </p>
-        <p>
-          Hem akademik hem de pratik deneyimlerimi bir araya getirerek gerçek dünya problemlerine temiz, ölçeklenebilir ve güvenilir yazılım çözümleri geliştirmeyi hedefliyorum. Temiz kod ve sürdürülebilir mimari her zaman önceliğim olmuştur.
+        <p style={{ marginBottom: "16px" }}>
+          Hem akademik hem de pratik deneyimlerimi bir araya getirerek gerçek dünya problemlerine temiz, ölçeklenebilir ve güvenilir yazılım çözümleri geliştirmeyi hedefliyorum.
         </p>
-        <p>
-          Freelance projelere ve tam zamanlı iş tekliflerine açığım. Seninle çalışmak için buradayım.
-        </p>
+        <p>Freelance projelere ve tam zamanlı iş tekliflerine açığım.</p>
       </div>
 
-      {/* Bilgi kartları + CV butonu hepsi yan yana */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 w-full">
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "10px", marginBottom: "16px" }}>
         {[
           { icon: MapPin,        label: "Doğum Yeri", value: "Hakkari"            },
-          { icon: GraduationCap, label: "Üniversite", value: "Iğdır Üniversitesi" },
-          { icon: Briefcase,     label: "Durum",      value: "Freelance & açık"   },
-          { icon: Languages,     label: "Dil",        value: "TR / EN"            },
+          { icon: GraduationCap, label: "Üniversite",  value: "Iğdır Üni."        },
+          { icon: Briefcase,     label: "Durum",       value: "Freelance & açık"  },
+          { icon: Languages,     label: "Dil",         value: "TR / EN"           },
         ].map(({ icon: Icon, label, value }) => (
-          <div key={label} className="rounded-2xl border border-[#222] bg-[#111] p-3 sm:p-5 flex flex-col gap-1.5 overflow-hidden">
-            <Icon size={18} className="text-[#6C63FF]" />
-            <p className="text-[#888] text-xs">{label}</p>
-            <p className="text-white font-bold text-sm leading-tight">{value}</p>
+          <div key={label} style={{ background: "#111", border: "1px solid #222", borderRadius: "12px", padding: "12px", overflow: "hidden" }}>
+            <Icon size={16} color="#6C63FF" />
+            <p style={{ color: "#888", fontSize: "11px", marginTop: "6px" }}>{label}</p>
+            <p style={{ color: "white", fontWeight: 700, fontSize: "12px", marginTop: "2px", wordBreak: "break-word" }}>{value}</p>
           </div>
         ))}
-
-        {/* CV kartı */}
-        <a
-          href="/cv"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-2xl border border-[#222] bg-[#111] p-3 sm:p-5 flex flex-col gap-1.5 hover:border-[#6C63FF] transition-colors group overflow-hidden"
-        >
-          <Download size={18} className="text-[#6C63FF]" />
-          <p className="text-[#888] text-xs">Belge</p>
-          <p className="text-white font-bold text-sm group-hover:text-[#6C63FF] transition-colors">CV İndir</p>
-        </a>
       </div>
+
+      <a href="/cv" target="_blank" rel="noopener noreferrer"
+        style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "10px 20px", borderRadius: "10px", border: "2px solid #333", color: "white", fontSize: "14px", fontWeight: 600, textDecoration: "none" }}>
+        <Download size={14} />
+        CV İndir
+      </a>
 
     </section>
   );

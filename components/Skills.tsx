@@ -1,62 +1,38 @@
 const categories = [
-  {
-    title: "Backend & API",
-    skills: ["Python", "FastAPI", "Node.js", "Express.js", "REST API", "JWT Auth", "Middleware"],
-  },
-  {
-    title: "Veritabanı",
-    skills: ["PostgreSQL", "SQLite", "SQL", "SQLAlchemy", "Prisma", "ORM"],
-  },
-  {
-    title: "Araçlar & Diğer",
-    skills: ["Git", "GitHub", "Docker", "Postman", "Linux", "Bash"],
-  },
+  { title: "Backend & API", skills: ["Python", "FastAPI", "Node.js", "Express.js", "REST API", "JWT Auth", "Middleware"] },
+  { title: "Veritabanı", skills: ["PostgreSQL", "SQLite", "SQL", "SQLAlchemy", "Prisma", "ORM"] },
+  { title: "Araçlar & Diğer", skills: ["Git", "GitHub", "Docker", "Postman", "Linux", "Bash"] },
 ];
 
-const learning = [
-  "TypeScript", "Redis", "Kubernetes", "AWS",
-  "Veri Yapıları", "Algoritmalar", "Sistem Tasarımı", "GraphQL",
-];
+const learning = ["TypeScript", "Redis", "Kubernetes", "AWS", "Veri Yapıları", "Algoritmalar", "Sistem Tasarımı", "GraphQL"];
 
 export default function Skills() {
   return (
-    <section className="min-h-[calc(100vh-4.5rem)] px-3 sm:px-8 md:px-16 py-8 w-full overflow-hidden" style={{ maxWidth: "100vw" }}>
+    <section style={{ padding: "24px 16px", width: "100%", boxSizing: "border-box", overflowX: "hidden" }}>
+      <p style={{ color: "#6C63FF", fontSize: "11px", fontFamily: "monospace", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "8px" }}>Yetenekler</p>
+      <h2 style={{ color: "white", fontSize: "clamp(1.5rem, 6vw, 3.5rem)", fontWeight: 900, marginBottom: "24px" }}>Teknoloji Stack</h2>
 
-      <p className="text-[#6C63FF] text-sm sm:text-base font-mono uppercase tracking-widest mb-3">Yetenekler</p>
-      <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-8">Teknoloji Stack</h2>
-
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-14 sm:mb-20">
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 280px), 1fr))", gap: "12px", marginBottom: "40px" }}>
         {categories.map(cat => (
-          <div key={cat.title}
-            className="rounded-2xl border border-[#222] bg-[#111] p-5 sm:p-8">
-            <h3 className="text-white font-extrabold text-xl sm:text-2xl mb-4 sm:mb-6">{cat.title}</h3>
-            <div className="flex flex-wrap gap-3">
-              {cat.skills.map(skill => (
-                <span key={skill}
-                  className="px-4 py-2 rounded-xl bg-[#1A1A1A] border border-[#333] text-[#D0D0D0] text-base font-semibold hover:border-[#6C63FF] hover:text-white transition-colors cursor-default">
-                  {skill}
-                </span>
+          <div key={cat.title} style={{ background: "#111", border: "1px solid #222", borderRadius: "16px", padding: "16px" }}>
+            <h3 style={{ color: "white", fontWeight: 800, fontSize: "clamp(0.9rem, 4vw, 1.1rem)", marginBottom: "12px" }}>{cat.title}</h3>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+              {cat.skills.map(s => (
+                <span key={s} style={{ padding: "5px 10px", borderRadius: "8px", background: "#1A1A1A", border: "1px solid #333", color: "#D0D0D0", fontSize: "12px", fontWeight: 600 }}>{s}</span>
               ))}
             </div>
           </div>
         ))}
       </div>
 
-      {/* Şu an öğreniyorum — aynı kart stili */}
-      <div className="rounded-2xl border border-[#6C63FF]/30 bg-[#111] p-8">
-        <h3 className="text-white font-extrabold text-2xl mb-6">
-          Şu an öğreniyorum
-        </h3>
-        <div className="flex flex-wrap gap-3">
-          {learning.map(skill => (
-            <span key={skill}
-              className="px-4 py-2 rounded-xl text-sm sm:text-base font-semibold text-[#6C63FF] bg-[#6C63FF]/10 border border-[#6C63FF]/30 hover:bg-[#6C63FF]/20 transition-colors cursor-default">
-              {skill}
-            </span>
+      <div style={{ background: "#111", border: "1px solid rgba(108,99,255,0.3)", borderRadius: "16px", padding: "16px" }}>
+        <h3 style={{ color: "white", fontWeight: 800, fontSize: "clamp(0.9rem, 4vw, 1.1rem)", marginBottom: "12px" }}>Şu an öğreniyorum</h3>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+          {learning.map(s => (
+            <span key={s} style={{ padding: "5px 10px", borderRadius: "8px", background: "rgba(108,99,255,0.1)", border: "1px solid rgba(108,99,255,0.3)", color: "#6C63FF", fontSize: "12px", fontWeight: 600 }}>{s}</span>
           ))}
         </div>
       </div>
-
     </section>
   );
 }
