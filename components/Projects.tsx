@@ -81,7 +81,7 @@ export default function Projects() {
       </div>
 
       {/* GitHub butonu — kartlardan ayrı, büyük */}
-      <div className="mt-20">
+      <div style={{ marginTop: "120px" }}>
         <a href="https://github.com/duyanmehmet" target="_blank" rel="noopener noreferrer"
           className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl border-2 border-[#333] text-[#C0C0C0] text-lg font-bold hover:border-[#6C63FF] hover:text-[#6C63FF] transition-all">
           <GithubIcon size={24} />

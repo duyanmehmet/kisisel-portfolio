@@ -26,7 +26,7 @@ export default function Skills() {
       <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-12">Teknoloji Stack</h2>
 
       {/* Ana kategoriler — büyük kartlar, sayfanın üstünde */}
-      <div className="grid md:grid-cols-3 gap-6 mb-20">
+      <div className="grid md:grid-cols-3 gap-6" style={{ marginBottom: "120px" }}>
         {categories.map(cat => (
           <div key={cat.title}
             className="rounded-2xl border border-[#222] bg-[#111] p-8">

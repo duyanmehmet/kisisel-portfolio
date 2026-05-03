@@ -10,7 +10,7 @@ export default function About() {
       <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-10">Ben Kimim?</h2>
 
       {/* Biyografi — tam genişlik */}
-      <div className="space-y-6 text-[#C8C8C8] text-lg leading-[1.9] mb-36 w-full">
+      <div className="space-y-6 text-[#C8C8C8] text-lg leading-[1.9] w-full" style={{ marginBottom: "120px" }}>
         <p>
           Ben <span className="text-white font-bold">Mehmet Duyan</span>. Hakkari doğumluyum. Küçük yaşlardan itibaren teknolojiye olan ilgimle yazılım dünyasına adım attım. Şu an <span className="text-white font-semibold">Iğdır Üniversitesi Bilgisayar Mühendisliği</span> bölümünde eğitimime devam ediyorum.
         </p>
