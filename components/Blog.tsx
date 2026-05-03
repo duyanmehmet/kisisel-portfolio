@@ -30,15 +30,15 @@ const posts = [
 
 export default function Blog() {
   return (
-    <section className="min-h-[calc(100vh-4.5rem)] px-8 md:px-16 py-14 w-full">
+    <section className="min-h-[calc(100vh-4.5rem)] px-4 sm:px-8 md:px-16 py-10 w-full">
 
-      <p className="text-[#6C63FF] text-base font-mono uppercase tracking-widest mb-3">Blog</p>
-      <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-12">Teknik Yazılar</h2>
+      <p className="text-[#6C63FF] text-sm sm:text-base font-mono uppercase tracking-widest mb-3">Blog</p>
+      <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-8">Teknik Yazılar</h2>
 
       <div className="space-y-6">
         {posts.map(post => (
           <Link key={post.slug} href={`/blog/${post.slug}`} className="block">
-            <article className="rounded-2xl border border-[#222] bg-[#111] p-8 flex flex-col md:flex-row md:items-center gap-6 hover:border-[#6C63FF]/50 transition-colors group cursor-pointer">
+            <article className="rounded-2xl border border-[#222] bg-[#111] p-5 sm:p-8 flex flex-col md:flex-row md:items-center gap-4 sm:gap-6 hover:border-[#6C63FF]/50 transition-colors group cursor-pointer">
 
               <div className="flex-1 space-y-4">
                 <div className="flex items-center gap-4 text-sm text-[#888]">

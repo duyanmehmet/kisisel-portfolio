@@ -37,13 +37,12 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="min-h-[calc(100vh-4.5rem)] px-8 md:px-16 py-14 w-full">
+    <section className="min-h-[calc(100vh-4.5rem)] px-4 sm:px-8 md:px-16 py-10 w-full">
 
-      <p className="text-[#6C63FF] text-base font-mono uppercase tracking-widest mb-3">Projeler</p>
-      <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-12">Çalışmalarım</h2>
+      <p className="text-[#6C63FF] text-sm sm:text-base font-mono uppercase tracking-widest mb-3">Projeler</p>
+      <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-8">Çalışmalarım</h2>
 
-      {/* Proje kartları */}
-      <div className="grid md:grid-cols-2 gap-7">
+      <div className="grid sm:grid-cols-2 gap-4 sm:gap-7">
         {projects.map(p => (
           <div key={p.title}
             className="rounded-2xl border border-[#222] bg-[#111] p-8 flex flex-col gap-6 hover:border-[#6C63FF]/50 transition-colors">

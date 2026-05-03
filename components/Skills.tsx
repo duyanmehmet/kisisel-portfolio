@@ -20,17 +20,16 @@ const learning = [
 
 export default function Skills() {
   return (
-    <section className="min-h-[calc(100vh-4.5rem)] px-8 md:px-16 py-14 w-full">
+    <section className="min-h-[calc(100vh-4.5rem)] px-4 sm:px-8 md:px-16 py-10 w-full">
 
-      <p className="text-[#6C63FF] text-base font-mono uppercase tracking-widest mb-3">Yetenekler</p>
-      <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-12">Teknoloji Stack</h2>
+      <p className="text-[#6C63FF] text-sm sm:text-base font-mono uppercase tracking-widest mb-3">Yetenekler</p>
+      <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-8">Teknoloji Stack</h2>
 
-      {/* Ana kategoriler — büyük kartlar, sayfanın üstünde */}
-      <div className="grid md:grid-cols-3 gap-6" style={{ marginBottom: "120px" }}>
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-14 sm:mb-20">
         {categories.map(cat => (
           <div key={cat.title}
-            className="rounded-2xl border border-[#222] bg-[#111] p-8">
-            <h3 className="text-white font-extrabold text-2xl mb-6">{cat.title}</h3>
+            className="rounded-2xl border border-[#222] bg-[#111] p-5 sm:p-8">
+            <h3 className="text-white font-extrabold text-xl sm:text-2xl mb-4 sm:mb-6">{cat.title}</h3>
             <div className="flex flex-wrap gap-3">
               {cat.skills.map(skill => (
                 <span key={skill}

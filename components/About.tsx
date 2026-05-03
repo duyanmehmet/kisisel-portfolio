@@ -4,13 +4,13 @@ import { Download, MapPin, Briefcase, Languages, GraduationCap } from "lucide-re
 
 export default function About() {
   return (
-    <section className="min-h-[calc(100vh-4.5rem)] px-8 md:px-16 py-16 w-full">
+    <section className="min-h-[calc(100vh-4.5rem)] px-4 sm:px-8 md:px-16 py-10 w-full">
 
-      <p className="text-[#6C63FF] text-base font-mono uppercase tracking-widest mb-3">Hakkımda</p>
-      <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-10">Ben Kimim?</h2>
+      <p className="text-[#6C63FF] text-sm sm:text-base font-mono uppercase tracking-widest mb-3">Hakkımda</p>
+      <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-8">Ben Kimim?</h2>
 
       {/* Biyografi — tam genişlik */}
-      <div className="space-y-6 text-[#C8C8C8] text-lg leading-[1.9] w-full" style={{ marginBottom: "120px" }}>
+      <div className="space-y-5 text-[#C8C8C8] text-base sm:text-lg leading-[1.8] w-full" style={{ marginBottom: "60px" }}>
         <p>
           Ben <span className="text-white font-bold">Mehmet Duyan</span>. Hakkari doğumluyum. Küçük yaşlardan itibaren teknolojiye olan ilgimle yazılım dünyasına adım attım. Şu an <span className="text-white font-semibold">Iğdır Üniversitesi Bilgisayar Mühendisliği</span> bölümünde eğitimime devam ediyorum.
         </p>
@@ -26,7 +26,7 @@ export default function About() {
       </div>
 
       {/* Bilgi kartları + CV butonu hepsi yan yana */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-32 w-full">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 w-full">
         {[
           { icon: MapPin,        label: "Doğum Yeri", value: "Hakkari"            },
           { icon: GraduationCap, label: "Üniversite", value: "Iğdır Üniversitesi" },

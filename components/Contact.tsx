@@ -37,13 +37,13 @@ export default function Contact() {
   };
 
   return (
-    <section className="min-h-[calc(100vh-4.5rem)] px-8 md:px-16 py-14 w-full">
+    <section className="min-h-[calc(100vh-4.5rem)] px-4 sm:px-8 md:px-16 py-10 w-full">
 
-      <p className="text-[#6C63FF] text-base font-mono uppercase tracking-widest mb-3">İletişim</p>
-      <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-4">Benimle Çalış</h2>
-      <p className="text-[#C0C0C0] text-xl mb-12">Proje fikrin mi var? Hemen yaz, en kısa sürede döneyim.</p>
+      <p className="text-[#6C63FF] text-sm sm:text-base font-mono uppercase tracking-widest mb-3">İletişim</p>
+      <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-3">Benimle Çalış</h2>
+      <p className="text-[#C0C0C0] text-base sm:text-xl mb-8">Proje fikrin mi var? Hemen yaz, en kısa sürede döneyim.</p>
 
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 gap-6 sm:gap-10">
 
         {/* Sol: iletişim linkleri */}
         <div className="space-y-4">

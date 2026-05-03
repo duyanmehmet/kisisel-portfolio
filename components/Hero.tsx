@@ -121,19 +121,19 @@ export default function Hero({ onNav }: { onNav: (s: Section) => void }) {
       <ParticleCanvas />
 
       {/* Orta içerik */}
-      <div className="relative z-10 text-center flex flex-col items-center gap-6">
-        <h1 className="text-6xl md:text-8xl font-extrabold text-white tracking-tight leading-none">
+      <div className="relative z-10 text-center flex flex-col items-center gap-4 px-4 w-full max-w-2xl">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold text-white tracking-tight leading-none">
           Mehmet Duyan
         </h1>
 
-        <div className="flex items-center justify-center gap-1.5 h-9">
-          <span className="text-[#C0C0C0] text-2xl font-mono tracking-wide">
+        <div className="flex items-center justify-center gap-1.5 h-8">
+          <span className="text-[#C0C0C0] text-base sm:text-xl md:text-2xl font-mono tracking-wide">
             {mounted ? text : ""}
           </span>
-          <span className="w-0.5 h-7 bg-[#6C63FF] animate-pulse inline-block" />
+          <span className="w-0.5 h-6 bg-[#6C63FF] animate-pulse inline-block" />
         </div>
 
-        <div className="flex items-center gap-10 mt-4">
+        <div className="flex items-center gap-6 sm:gap-10 mt-2">
           <a href="https://github.com/duyanmehmet" target="_blank" rel="noopener noreferrer"
             className="text-white/50 hover:text-[#6C63FF] transition-colors">
             <GithubIcon />
