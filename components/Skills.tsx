@@ -50,7 +50,7 @@ export default function Skills() {
         <div className="flex flex-wrap gap-3">
           {learning.map(skill => (
             <span key={skill}
-              className="px-4 py-2 rounded-xl text-base font-semibold text-[#6C63FF] bg-[#6C63FF]/10 border border-[#6C63FF]/30 hover:bg-[#6C63FF]/20 transition-colors cursor-default">
+              className="px-4 py-2 rounded-xl text-sm sm:text-base font-semibold text-[#6C63FF] bg-[#6C63FF]/10 border border-[#6C63FF]/30 hover:bg-[#6C63FF]/20 transition-colors cursor-default">
               {skill}
             </span>
           ))}

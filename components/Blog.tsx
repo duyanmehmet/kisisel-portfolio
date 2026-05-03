@@ -47,16 +47,16 @@ export default function Blog() {
                   <span>{post.readTime} okuma</span>
                 </div>
 
-                <h3 className="text-white font-extrabold text-2xl leading-snug group-hover:text-[#6C63FF] transition-colors">
+                <h3 className="text-white font-extrabold text-lg sm:text-2xl leading-snug group-hover:text-[#6C63FF] transition-colors">
                   {post.title}
                 </h3>
 
-                <p className="text-[#C0C0C0] text-lg leading-relaxed">{post.summary}</p>
+                <p className="text-[#C0C0C0] text-sm sm:text-base md:text-lg leading-relaxed">{post.summary}</p>
 
                 <div className="flex flex-wrap gap-2.5 pt-1">
                   {post.tags.map(tag => (
                     <span key={tag}
-                      className="px-4 py-2 rounded-xl text-base font-semibold text-[#6C63FF] bg-[#6C63FF]/10 border border-[#6C63FF]/25">
+                      className="px-4 py-2 rounded-xl text-sm sm:text-base font-semibold text-[#6C63FF] bg-[#6C63FF]/10 border border-[#6C63FF]/25">
                       {tag}
                     </span>
                   ))}

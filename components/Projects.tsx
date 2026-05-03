@@ -48,7 +48,7 @@ export default function Projects() {
             className="rounded-2xl border border-[#222] bg-[#111] p-8 flex flex-col gap-6 hover:border-[#6C63FF]/50 transition-colors">
 
             <div className="flex items-start justify-between gap-3">
-              <h3 className="text-white font-extrabold text-2xl leading-tight">{p.title}</h3>
+              <h3 className="text-white font-extrabold text-lg sm:text-2xl leading-tight">{p.title}</h3>
               <div className="flex gap-3 shrink-0 mt-1">
                 {p.github && (
                   <a href={p.github} target="_blank" rel="noopener noreferrer"
@@ -65,12 +65,12 @@ export default function Projects() {
               </div>
             </div>
 
-            <p className="text-[#C0C0C0] text-lg leading-relaxed flex-1">{p.description}</p>
+            <p className="text-[#C0C0C0] text-sm sm:text-base md:text-lg leading-relaxed flex-1">{p.description}</p>
 
             <div className="flex flex-wrap gap-2.5">
               {p.tech.map(t => (
                 <span key={t}
-                  className="px-4 py-2 rounded-xl text-base font-semibold text-[#6C63FF] bg-[#6C63FF]/10 border border-[#6C63FF]/25">
+                  className="px-4 py-2 rounded-xl text-sm sm:text-base font-semibold text-[#6C63FF] bg-[#6C63FF]/10 border border-[#6C63FF]/25">
                   {t}
                 </span>
               ))}

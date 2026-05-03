@@ -14,6 +14,17 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  max-width: 100%;
+}
+
+p, span, h1, h2, h3, h4, li, a, label {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
 }
 
 html {

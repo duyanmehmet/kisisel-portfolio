@@ -122,7 +122,7 @@ export default function Hero({ onNav }: { onNav: (s: Section) => void }) {
 
       {/* Orta içerik */}
       <div className="relative z-10 text-center flex flex-col items-center gap-4 px-4 w-full">
-        <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold text-white tracking-tight leading-none whitespace-nowrap">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold text-white tracking-tight leading-none">
           Mehmet Duyan
         </h1>
 
